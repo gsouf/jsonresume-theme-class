@@ -1,5 +1,7 @@
 # Class theme for JSONResume [![](https://badge.fury.io/js/jsonresume-theme-class.svg)](http://badge.fury.io/js/jsonresume-theme-class)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Charlotteis/jsonresume-theme-class.svg)](https://greenkeeper.io/)
+
 
 First, check out [JSON Resume](http://jsonresume.org/)
 
