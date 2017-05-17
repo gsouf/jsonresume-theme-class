@@ -2,10 +2,14 @@
 
 /* General, overall styling */
 body {
-	background: #528047;
+	background: #F9F9F9;
 	font-size: 0.9em;
 	font-family: 'Lato', sans-serif;
 	margin-bottom: 100px;
+}
+
+h2{
+	margin:.55em 0;
 }
 
 em {
@@ -32,7 +36,7 @@ ul {
 	margin-bottom: 0;
 }
 section {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 blockquote {
@@ -45,9 +49,9 @@ blockquote {
 /* Header name styling */
 
 header {
-	background: #4e6748;
-	padding: 20px;
-	margin-bottom: 50px;
+	background: #528047;
+	padding: 12px;
+	margin-bottom: 5px;
 	color: #F3F3F3;
 }
 
@@ -68,6 +72,14 @@ header {
 	border-radius: 100px;
 }
 
+h1{
+	margin: 10px 0;
+}
+
+section{
+	page-break-inside: avoid;
+}
+
 header h2 {
 	font-size: 1em;
 }
@@ -76,6 +88,24 @@ header h2 {
 header h3 {
 	font-size: 0.9em;
 	color: #DDD;
+}
+
+#languages h4{
+	display: inline-block;
+	width: 80px;
+	margin: 0px 0 10px;
+}
+
+.language:not(:first-child){
+	margin-left: 6px;
+}
+
+.language:after{
+	content: ', '
+}
+
+.language:last-child:after{
+	content: ''
 }
 
 /* End header name styling */
@@ -89,7 +119,7 @@ header h3 {
 	border-bottom: 1px #E2E2E2 solid;
 }
 #basics h3 {
-	margin-top: 1.5em;
+	margin-top: 15px;
 	margin-bottom: 10px;
 }
 #basics .contact strong {
@@ -105,13 +135,12 @@ header h3 {
 .website,
 .email,
 .phone {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	float: left;
 	width: 50%;
 }
 
 .summary {
-	padding-top: 5px;
 	clear: both;
 }
 
@@ -133,7 +162,6 @@ header h3 {
 /* Work and volunteering experience styling */
 
 .work_date,
-
 .work_position,
 .work_website,
 .institution,
@@ -145,8 +173,12 @@ header h3 {
 	vertical-align: middle;
 }
 
+#education .institution{
+	width: 74%;
+}
+
 .work_position{
-	width:	45%;
+	width:	49%;
 }
 
 .work_date, .study_date, .work_website{
@@ -155,6 +187,22 @@ header h3 {
 
 .courses {
 	clear: both;
+}
+
+ul.badges {
+	list-style: none;
+	padding: 0;
+}
+ul.badges li{
+	display: inline-block;
+	padding: 3px 6px;
+	margin: 2px;
+	border-radius: 2px;
+	font-size: 0.8em;
+	color: #666;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background: #f0f0f0;
 }
 
 .dissertation {
@@ -174,7 +222,7 @@ header h3 {
 
 /* End work and volunteering */
 
-/* Skills, languages, interests and references styling */
+/* Skills, interests and references styling */
 
 #skills {
 	margin-bottom: 10px;
@@ -183,9 +231,7 @@ header h3 {
 }
 
 #skills .item,
-#languages .item {
-	margin: 0 0 25px 0;
-}
+
 
 #interests .item {
 	margin-bottom: 25px;
@@ -195,7 +241,6 @@ header h3 {
 	overflow: hidden;
 }
 
-#languages .item,
 #interests .item,
 #skills .item {
 	float: left;

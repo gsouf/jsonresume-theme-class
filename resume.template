@@ -89,8 +89,26 @@
             <p>{{summary}}</p>
         </div>
         {{/if}}
+        {{/resume.basics}}
+
+        {{#if resume.languages.length}}
+            <div id="languages">
+                <h4>Languages</h4>
+                <span class="languages">
+                    {{#each resume.languages}}
+                        <span class="language">
+                            {{language}}
+                        </span>
+                    {{/each}}
+                </span>
+            </div>
+        {{/if}}
+
     </section>
-    {{/resume.basics}}
+
+
+
+
 
     {{#if resume.work.length}}
     <section id="work">
@@ -118,12 +136,12 @@
             <div class="work_date">
                 {{#if startDate}}
                 <span class="startDate">
-                    {{startDate}}
+                    {{dateYear startDate}}
                 </span>
                 {{/if}}
                 {{#if endDate}}
                 <span class="endDate">
-                    - {{endDate}}
+                    - {{dateYear endDate}}
                 </span>
                 {{else}}
                 <span class="endDate">
@@ -181,12 +199,12 @@
             <div class="work_date">
                 {{#if startDate}}
                 <span class="startDate">
-                    {{startDate}}
+                    {{dateYear startDate}}
                 </span>
                 {{/if}}
                 {{#if endDate}}
                 <span class="endDate">
-                    - {{endDate}}
+                    - {{dateYear endDate}}
                 </span>
                 {{else}}
                 <span class="endDate">
@@ -228,12 +246,12 @@
                 <div class="study_date">
                     {{#if startDate}}
                     <span class="startDate">
-                        {{startDate}}
+                        {{dateYear startDate}}
                     </span>
                     {{/if}}
                     {{#if endDate}}
                     <span class="endDate">
-                        - {{endDate}}
+                        - {{dateYear endDate}}
                     </span>
                     {{else}}
                     <span class="endDate">
@@ -267,7 +285,7 @@
 
 
             {{#if courses.length}}
-            <ul class="courses">
+            <ul class="courses badges">
                 {{#each courses}}
                 <li>{{.}}</li>
                 {{/each}}
@@ -300,7 +318,7 @@
             </div>
             {{/if}}
             {{#if keywords.length}}
-            <ul class="keywords">
+            <ul class="keywords badges">
                 {{#each keywords}}
                 <li>{{.}}</li>
                 {{/each}}
@@ -311,30 +329,7 @@
     </section>
     {{/if}}
 
-    {{#if resume.languages.length}}
-    <section id="languages">
-        <h2>Languages</h2>
 
-        <div class="item"
-            <ul>
-            {{#each resume.languages}}
-                <li>
-                {{#if language}}
-                    <span class="language">
-                        {{language}}
-                    </span>
-                {{/if}}
-                {{#if fluency}}
-                    <span class="level">
-                        <em>{{fluency}}</em>
-                    </span>
-                {{/if}}
-                </li>
-            {{/each}}
-            </ul>
-        </div>
-    </section>
-    {{/if}}
 
     {{#if resume.interests.length}}
     <section id="interests">
@@ -347,7 +342,7 @@
             </div>
             {{/if}}
             {{#if keywords.length}}
-            <ul class="keywords">
+            <ul class="keywords badges">
                 {{#each keywords}}
                 <li>{{.}}</li>
                 {{/each}}
