@@ -2,7 +2,7 @@
 
 /* General, overall styling */
 body {
-	background: #F9F9F9;
+	background: #528047;
 	font-size: 0.9em;
 	font-family: 'Lato', sans-serif;
 	margin-bottom: 100px;
@@ -45,34 +45,41 @@ blockquote {
 /* Header name styling */
 
 header {
-	background: #68B6E3;
-	padding: 50px;
+	background: #4e6748;
+	padding: 20px;
 	margin-bottom: 50px;
+	color: #F3F3F3;
 }
 
-header h1 {
-	color: #FFFFFF;
+.header-inner, .container{
 	max-width: 700px;
 	margin: 0 auto;
+	padding: 0 50px;
+}
+
+.header-inner{
+	position: relative;
+}
+
+.profile-picture{
+	position: absolute;
+	right: 0;
+	top: 5px;
+	border-radius: 100px;
 }
 
 header h2 {
-	color: #F3F3F3;
 	font-size: 1em;
-	max-width: 700px;
-	margin: 0 auto;
+}
+
+
+header h3 {
+	font-size: 0.9em;
+	color: #DDD;
 }
 
 /* End header name styling */
 
-/* Set width of main body of CV */
-.container {
-	max-width: 700px;
-	padding: 0 50px;
-	margin: 0 auto;
-}
-
-/* End */
 
 /* Styling Basics (Name, Contact, About, Profiles) */
 
@@ -126,14 +133,24 @@ header h2 {
 /* Work and volunteering experience styling */
 
 .work_date,
+
 .work_position,
 .work_website,
 .institution,
 .study_date,
 .qualification {
 	margin-bottom: 10px;
-	float: left;
-	width: 30%;
+	display: inline-block;
+	width: 25%;
+	vertical-align: middle;
+}
+
+.work_position{
+	width:	45%;
+}
+
+.work_date, .study_date, .work_website{
+	text-align: right;
 }
 
 .courses {
@@ -188,6 +205,10 @@ header h2 {
 #references,
 #interests {
 	clear: both;
+}
+
+#education .item{
+	margin-top: 15px;
 }
 
 /* End styling */
